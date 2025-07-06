@@ -1,0 +1,183 @@
+# Rust
+/target/
+**/*.rs.bk
+*.pdb
+Cargo.lock
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Build artifacts
+dist/
+build/
+out/
+
+# WebAssembly
+crates/wasm/pkg/
+*.wasm
+
+# Node.js (for WASM tooling)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Android
+crates/mobile/android/build/
+crates/mobile/android/.gradle/
+crates/mobile/android/local.properties
+crates/mobile/android/app/build/
+*.apk
+*.ap_
+*.aab
+
+# iOS
+crates/mobile/ios/build/
+crates/mobile/ios/DerivedData/
+crates/mobile/ios/*.xcworkspace/xcuserdata/
+crates/mobile/ios/*.xcodeproj/xcuserdata/
+crates/mobile/ios/*.ipa
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Configuration files with secrets
+config/secrets.toml
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docker
+.dockerignore
+
+# Certificates and keys
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+keystore.jks
+
+# Test artifacts
+test-results/
+screenshots/
+videos/
+
+# Benchmarks
+criterion/
+
+# Documentation build
+book/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Editor backups
+*~
+*.orig
+*.rej
+
+# Profiling data
+*.prof
+perf.data*
+
+# CMake (for native dependencies)
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Python (for build scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Generated files
+proto/generated/
+bindings/generated/
+docs/generated/
+
+# Platform specific
+[Tt]humbs.db
+*.msm
+*.msp
+*.lnk
+
+# JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim
+*.swp
+*.swo
+*.un~
+Session.vim
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Local development overrides
+local.toml
+development.local.toml

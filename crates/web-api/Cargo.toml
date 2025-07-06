@@ -1,0 +1,49 @@
+[package]
+name = "mzekezeke-web-api"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kundai Farai Sachikonye <kundai@fullscreen-triangle.com>"]
+description = "REST API server for MDTEC"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/fullscreen-triangle/mzekezeke"
+keywords = ["api", "rest", "web", "server", "mdtec"]
+categories = ["web-programming"]
+
+[dependencies]
+# Core mzekezeke
+mzekezeke-core = { path = "../core" }
+mzekezeke-server = { path = "../server" }
+
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+futures = "0.3"
+
+# Web framework
+axum = { version = "0.7", features = ["ws"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace", "fs"] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging
+tracing = "0.1"
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# Networking
+uuid = { version = "1.0", features = ["v4", "serde"] }
+
+[[bin]]
+name = "mzekezeke-web-api"
+path = "src/main.rs"
+
+[features]
+default = []
+cors = ["tower-http/cors"] 

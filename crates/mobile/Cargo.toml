@@ -1,0 +1,54 @@
+[package]
+name = "mzekezeke-mobile"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kundai Farai Sachikonye <kundai@fullscreen-triangle.com>"]
+description = "Mobile platform bindings for MDTEC"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/fullscreen-triangle/mzekezeke"
+keywords = ["mobile", "android", "ios", "cross-platform", "mdtec"]
+categories = ["api-bindings"]
+
+[dependencies]
+# Core mzekezeke
+mzekezeke-core = { path = "../core" }
+mzekezeke-client = { path = "../client" }
+mzekezeke-sensors = { path = "../sensors" }
+
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+futures = "0.3"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging
+tracing = "0.1"
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# Networking
+uuid = { version = "1.0", features = ["v4", "serde"] }
+
+# Android specific
+[target.'cfg(target_os = "android")'.dependencies]
+jni = "0.21"
+ndk = "0.8"
+ndk-glue = "0.7"
+
+# iOS specific
+[target.'cfg(target_os = "ios")'.dependencies]
+objc = "0.2"
+objc-foundation = "0.1"
+objc_id = "0.1"
+
+[features]
+default = []
+android = ["jni", "ndk", "ndk-glue"]
+ios = ["objc", "objc-foundation", "objc_id"] 

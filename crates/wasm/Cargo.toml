@@ -1,0 +1,61 @@
+[package]
+name = "mzekezeke-wasm"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kundai Farai Sachikonye <kundai@fullscreen-triangle.com>"]
+description = "WebAssembly bindings for MDTEC"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/fullscreen-triangle/mzekezeke"
+keywords = ["wasm", "webassembly", "browser", "javascript", "mdtec"]
+categories = ["wasm"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# Core mzekezeke
+mzekezeke-core = { path = "../core" }
+mzekezeke-client = { path = "../client", features = ["wasm"] }
+mzekezeke-sensors = { path = "../sensors", features = ["wasm"] }
+
+# WebAssembly
+wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }
+wasm-bindgen-futures = "0.4"
+js-sys = "0.3"
+web-sys = { version = "0.3", features = [
+    "console",
+    "Navigator",
+    "Geolocation",
+    "Position",
+    "NetworkInformation",
+    "Performance",
+    "PerformanceObserver",
+    "Window",
+    "Document",
+    "Element",
+] }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde-wasm-bindgen = "0.6"
+
+# Error handling
+wasm-bindgen-test = "0.3"
+console_error_panic_hook = "0.1"
+
+# Logging
+tracing = "0.1"
+tracing-wasm = "0.2"
+
+# Time handling
+chrono = { version = "0.4", features = ["serde", "wasmbind"] }
+
+# Networking
+uuid = { version = "1.0", features = ["v4", "serde"] }
+
+[dependencies.getrandom]
+version = "0.2"
+features = ["js"]
+
+[features]
+default = ["console_error_panic_hook"] 

@@ -1,0 +1,65 @@
+[package]
+name = "mzekezeke-sensors"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kundai Farai Sachikonye <kundai@fullscreen-triangle.com>"]
+description = "Environmental sensor implementations for MDTEC"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/fullscreen-triangle/mzekezeke"
+keywords = ["sensors", "environmental", "gps", "cellular", "wifi"]
+categories = ["hardware-support", "science"]
+
+[dependencies]
+# Core mzekezeke
+mzekezeke-core = { path = "../core" }
+
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+futures = "0.3"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging
+tracing = "0.1"
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# Networking for network sensors
+reqwest = { version = "0.11", features = ["json"] }
+
+# WebAssembly support
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wasm-bindgen = "0.2"
+js-sys = "0.3"
+web-sys = { version = "0.3", features = [
+    "Navigator",
+    "Geolocation",
+    "Position",
+    "NetworkInformation",
+    "Performance",
+    "PerformanceObserver",
+] }
+
+# Platform-specific dependencies
+[target.'cfg(target_os = "linux")'.dependencies]
+libc = "0.2"
+systemstat = "0.2"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+core-foundation = "0.9"
+system-configuration = "0.5"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+winapi = { version = "0.3", features = ["winuser", "wlanapi"] }
+
+[features]
+default = ["native"]
+native = []
+wasm = ["wasm-bindgen", "js-sys", "web-sys"]

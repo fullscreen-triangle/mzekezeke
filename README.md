@@ -1,3 +1,14 @@
+<h1 align="center">Mzekezeke</h1>
+<p align="center"><em> Ubani umzekezeke</em></p>
+
+<p align="center">
+  <img src="assets/img/bhuru-sukurin-02.png" alt="Ubani" width="300"/>
+</p>
+
+
+
+
+
 # Multi-Dimensional Temporal Ephemeral Cryptography: The Ultimate Encryption Paradigm
 
 **Authors**: Kundai Farai Sachikonye  

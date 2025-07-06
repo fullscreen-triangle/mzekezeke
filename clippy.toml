@@ -1,0 +1,17 @@
+msrv = "1.75.0"
+warn-on-all-wildcard-imports = true
+disallowed-methods = [
+    "std::env::set_var",
+    "std::env::remove_var",
+]
+disallowed-types = [
+    "std::collections::HashMap",
+    "std::collections::HashSet",
+]
+disallowed-macros = [
+    "println",
+    "eprintln",
+    "dbg",
+]
+avoid-breaking-exported-api = true
+check-private-items = true

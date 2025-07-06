@@ -1,0 +1,125 @@
+syntax = "proto3";
+
+package mdtec;
+
+import "google/protobuf/timestamp.proto";
+import "sensors.proto";
+import "challenge.proto";
+
+// Main MDTEC service definition
+service MdtecService {
+  // Request a new challenge
+  rpc RequestChallenge(ChallengeRequest) returns (ChallengeResponse);
+  
+  // Submit a challenge response
+  rpc SubmitResponse(ResponseSubmission) returns (ResponseValidation);
+  
+  // Establish secure channel
+  rpc EstablishChannel(ChannelRequest) returns (ChannelResponse);
+  
+  // Send encrypted message
+  rpc SendMessage(EncryptedMessage) returns (MessageAck);
+  
+  // Receive encrypted messages
+  rpc ReceiveMessages(MessageRequest) returns (stream EncryptedMessage);
+  
+  // Get server status
+  rpc GetStatus(StatusRequest) returns (StatusResponse);
+}
+
+// Request for a new challenge
+message ChallengeRequest {
+  string client_id = 1;
+  string peer_id = 2;
+  repeated SensorCapability capabilities = 3;
+  google.protobuf.Timestamp timestamp = 4;
+}
+
+// Response containing a challenge
+message ChallengeResponse {
+  string challenge_id = 1;
+  Challenge challenge = 2;
+  google.protobuf.Timestamp expires_at = 3;
+  ResponseStatus status = 4;
+}
+
+// Submit response to challenge
+message ResponseSubmission {
+  string challenge_id = 1;
+  string client_id = 2;
+  repeated SensorReading readings = 3;
+  bytes response_data = 4;
+  google.protobuf.Timestamp timestamp = 5;
+}
+
+// Validation result for response
+message ResponseValidation {
+  string challenge_id = 1;
+  bool valid = 2;
+  string channel_id = 3;
+  bytes channel_key = 4;
+  ResponseStatus status = 5;
+  string error_message = 6;
+}
+
+// Request to establish secure channel
+message ChannelRequest {
+  string channel_id = 1;
+  string client_id = 2;
+  bytes public_key = 3;
+}
+
+// Response for channel establishment
+message ChannelResponse {
+  string channel_id = 1;
+  bytes server_public_key = 2;
+  ResponseStatus status = 3;
+}
+
+// Encrypted message
+message EncryptedMessage {
+  string channel_id = 1;
+  string message_id = 2;
+  bytes encrypted_data = 3;
+  bytes nonce = 4;
+  google.protobuf.Timestamp timestamp = 5;
+}
+
+// Message acknowledgment
+message MessageAck {
+  string message_id = 1;
+  ResponseStatus status = 2;
+}
+
+// Request for messages
+message MessageRequest {
+  string channel_id = 1;
+  string client_id = 2;
+  google.protobuf.Timestamp since = 3;
+}
+
+// Status request
+message StatusRequest {
+  string client_id = 1;
+}
+
+// Status response
+message StatusResponse {
+  string server_version = 1;
+  google.protobuf.Timestamp server_time = 2;
+  uint32 active_clients = 3;
+  uint32 active_channels = 4;
+  ResponseStatus status = 5;
+}
+
+// Response status codes
+enum ResponseStatus {
+  SUCCESS = 0;
+  INVALID_REQUEST = 1;
+  CHALLENGE_EXPIRED = 2;
+  INVALID_RESPONSE = 3;
+  CHANNEL_NOT_FOUND = 4;
+  INSUFFICIENT_SENSORS = 5;
+  RATE_LIMITED = 6;
+  INTERNAL_ERROR = 7;
+} 

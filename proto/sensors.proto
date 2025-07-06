@@ -1,0 +1,210 @@
+syntax = "proto3";
+
+package sensors;
+
+import "google/protobuf/timestamp.proto";
+
+// Sensor capability information
+message SensorCapability {
+  SensorType type = 1;
+  bool available = 2;
+  double precision = 3;
+  uint32 update_rate_ms = 4;
+  map<string, string> metadata = 5;
+}
+
+// Sensor reading data
+message SensorReading {
+  SensorType type = 1;
+  google.protobuf.Timestamp timestamp = 2;
+  oneof data {
+    GpsReading gps = 3;
+    CellularReading cellular = 4;
+    WifiReading wifi = 5;
+    HardwareReading hardware = 6;
+    AtmosphericReading atmospheric = 7;
+    ElectromagneticReading electromagnetic = 8;
+    ThermalReading thermal = 9;
+    AcousticReading acoustic = 10;
+    NetworkReading network = 11;
+    PowerReading power = 12;
+    SystemReading system = 13;
+    QuantumReading quantum = 14;
+  }
+}
+
+// Sensor types
+enum SensorType {
+  GPS = 0;
+  CELLULAR = 1;
+  WIFI = 2;
+  HARDWARE = 3;
+  ATMOSPHERIC = 4;
+  ELECTROMAGNETIC = 5;
+  THERMAL = 6;
+  ACOUSTIC = 7;
+  NETWORK = 8;
+  POWER = 9;
+  SYSTEM = 10;
+  QUANTUM = 11;
+}
+
+// GPS sensor reading
+message GpsReading {
+  double latitude = 1;
+  double longitude = 2;
+  double altitude = 3;
+  double accuracy = 4;
+  double speed = 5;
+  double bearing = 6;
+  uint32 satellite_count = 7;
+}
+
+// Cellular sensor reading
+message CellularReading {
+  string carrier = 1;
+  string network_type = 2;
+  int32 signal_strength = 3;
+  repeated CellTower towers = 4;
+  string country_code = 5;
+  string network_code = 6;
+}
+
+// Cell tower information
+message CellTower {
+  uint32 cell_id = 1;
+  uint32 area_code = 2;
+  int32 signal_strength = 3;
+  string tower_type = 4;
+}
+
+// WiFi sensor reading
+message WifiReading {
+  repeated WifiNetwork networks = 1;
+  string connected_ssid = 2;
+  string connected_bssid = 3;
+  int32 connected_rssi = 4;
+  uint32 frequency = 5;
+}
+
+// WiFi network information
+message WifiNetwork {
+  string ssid = 1;
+  string bssid = 2;
+  int32 rssi = 3;
+  uint32 frequency = 4;
+  string security = 5;
+}
+
+// Hardware sensor reading
+message HardwareReading {
+  CpuInfo cpu = 1;
+  MemoryInfo memory = 2;
+  repeated DiskInfo disks = 3;
+  NetworkInterfaceInfo network = 4;
+  double temperature = 5;
+  double voltage = 6;
+}
+
+// CPU information
+message CpuInfo {
+  uint32 core_count = 1;
+  double usage_percent = 2;
+  double frequency_mhz = 3;
+  double temperature = 4;
+  string model = 5;
+}
+
+// Memory information
+message MemoryInfo {
+  uint64 total_bytes = 1;
+  uint64 available_bytes = 2;
+  uint64 used_bytes = 3;
+  double usage_percent = 4;
+}
+
+// Disk information
+message DiskInfo {
+  string mount_point = 1;
+  uint64 total_bytes = 2;
+  uint64 available_bytes = 3;
+  uint64 used_bytes = 4;
+  double usage_percent = 5;
+}
+
+// Network interface information
+message NetworkInterfaceInfo {
+  string name = 1;
+  uint64 bytes_sent = 2;
+  uint64 bytes_received = 3;
+  uint64 packets_sent = 4;
+  uint64 packets_received = 5;
+}
+
+// Atmospheric sensor reading
+message AtmosphericReading {
+  double pressure_hpa = 1;
+  double humidity_percent = 2;
+  double temperature_celsius = 3;
+  double altitude_meters = 4;
+}
+
+// Electromagnetic sensor reading
+message ElectromagneticReading {
+  double field_strength_tesla = 1;
+  double frequency_hz = 2;
+  double amplitude = 3;
+  string polarization = 4;
+}
+
+// Thermal sensor reading
+message ThermalReading {
+  double temperature_celsius = 1;
+  double gradient_celsius_per_meter = 2;
+  double heat_flux_watts_per_m2 = 3;
+  string sensor_location = 4;
+}
+
+// Acoustic sensor reading
+message AcousticReading {
+  double sound_level_db = 1;
+  repeated double frequency_spectrum = 2;
+  double peak_frequency_hz = 3;
+  double ambient_noise_db = 4;
+}
+
+// Network sensor reading
+message NetworkReading {
+  double latency_ms = 1;
+  double bandwidth_mbps = 2;
+  double packet_loss_percent = 3;
+  double jitter_ms = 4;
+  string connection_type = 5;
+}
+
+// Power sensor reading
+message PowerReading {
+  double voltage_volts = 1;
+  double current_amperes = 2;
+  double power_watts = 3;
+  double frequency_hz = 4;
+  double power_factor = 5;
+}
+
+// System sensor reading
+message SystemReading {
+  double cpu_load_percent = 1;
+  double memory_usage_percent = 2;
+  double disk_usage_percent = 3;
+  uint32 process_count = 4;
+  uint32 thread_count = 5;
+  double uptime_seconds = 6;
+}
+
+// Quantum sensor reading
+message QuantumReading {
+  bytes random_data = 1;
+  double entropy_bits = 2;
+  double quantum_noise_level = 3;
+  string generator_type = 4;
+} 

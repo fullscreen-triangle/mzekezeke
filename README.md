@@ -2,7 +2,8 @@
 <p align="center"><em> Consenquences of thermodynamics</em></p>
 
 <p align="center">
-  <img src="assets/img/bhuru-sukurin-02.png" alt="Logo" width="200"/>
+  <img src="assets/img/bhuru-sukurin-02.png" alt="Logo" width="180
+  "/>
 </p>
 
 

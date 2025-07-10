@@ -9,9 +9,10 @@
 #![deny(unsafe_code)]
 
 pub mod crypto;
-pub mod challenge;
-pub mod response;
-pub mod channel;
+pub mod dimensions;
+pub mod oscillatory;
+pub mod security;
+pub mod utils;
 pub mod error;
 pub mod types;
 

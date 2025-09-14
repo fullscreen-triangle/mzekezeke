@@ -1,0 +1,6 @@
+# Ultra-minimal requirements - works everywhere
+numpy>=1.20.0
+matplotlib>=3.3.0
+
+# Optional (for better system info, but not required)
+# psutil>=5.0.0  # Uncomment if available, but demo works without it

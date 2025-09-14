@@ -1,0 +1,349 @@
+{
+  "demo_timestamp": "2025-09-13T18:38:12.783125",
+  "environmental_data": [
+    {
+      "timestamp": 1757781475.6336687,
+      "computational": 0.8234999999999999,
+      "temporal": 0.33829132440176146,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.9309,
+      "combined_entropy": 1.8286030089990584,
+      "environmental_hash": "7331cc2b29288916ea4f40227249623ce81f939b175414c733c8c181f60a24cd"
+    },
+    {
+      "timestamp": 1757781477.1244342,
+      "computational": 0.925,
+      "temporal": 0.22797988154415927,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.0077,
+      "combined_entropy": 1.6100558998816785,
+      "environmental_hash": "ce05ee512084e7c370e035d50ff2a6d341df41c48db81a76e6a87ed4de0c1de0"
+    },
+    {
+      "timestamp": 1757781477.8062546,
+      "computational": 0.6595,
+      "temporal": 0.30666817347099745,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.0559,
+      "combined_entropy": 1.4888691389692215,
+      "environmental_hash": "0749cc9ac40c4c42d6752541c04b07a9eaa82fbf7dc63c127f568daa5f9badc9"
+    },
+    {
+      "timestamp": 1757781478.4278743,
+      "computational": 0.6679999999999999,
+      "temporal": 0.16703479981619337,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.0942,
+      "combined_entropy": 1.4722836508990202,
+      "environmental_hash": "af38a86fbb2ef6c1bbda4deaa4f4f559000d4bb2065ada4970b16d2d6884a57a"
+    },
+    {
+      "timestamp": 1757781479.0506835,
+      "computational": 0.6045,
+      "temporal": 0.1965127303564631,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.2499,
+      "combined_entropy": 1.466665741587723,
+      "environmental_hash": "732cf3626a6fe7f6545a2053eaeb9ed31e9e6ee1233319cea0cb57e578918eac"
+    },
+    {
+      "timestamp": 1757781479.6724577,
+      "computational": 0.5585,
+      "temporal": 0.16917532541668884,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.2619,
+      "combined_entropy": 1.4469813527080282,
+      "environmental_hash": "93e4d1780302dac0f424cf87d585e0fcf7346718a7a62a0f50f145de0f22657a"
+    },
+    {
+      "timestamp": 1757781480.2946174,
+      "computational": 0.6475,
+      "temporal": 0.2212488394343549,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.3458,
+      "combined_entropy": 1.5074501064068295,
+      "environmental_hash": "7a86da3d21e329760719fcafe3231fba2d6e88214bcc067b00516e0e1ea6e98b"
+    },
+    {
+      "timestamp": 1757781480.912124,
+      "computational": 0.644,
+      "temporal": 0.131151462632704,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.3458,
+      "combined_entropy": 1.4953712684499494,
+      "environmental_hash": "a2eea789d51adec7e13e93dea6a99e406e082db64952ba658452f377b56ce6f1"
+    },
+    {
+      "timestamp": 1757781481.5298948,
+      "computational": 0.6475,
+      "temporal": 0.2254602901831383,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.4914,
+      "combined_entropy": 1.5479610579095255,
+      "environmental_hash": "ae0beaf3e5680012ca43b5e3e3ebb914b8acf288b1226500495218f91d7db8fb"
+    },
+    {
+      "timestamp": 1757781482.1495676,
+      "computational": 0.6359999999999999,
+      "temporal": 1.6829597702440906,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.4914,
+      "combined_entropy": 2.272211352980826,
+      "environmental_hash": "e80f74a34d53b359182ba88d7ffc5ec00fffe1f5602951c5c5d50037c2732335"
+    }
+  ],
+  "encryption_result": {
+    "original_data": "Hello MDTEC World!",
+    "environmental_state": {
+      "timestamp": 1757781484.9661963,
+      "computational": 0.6565000000000001,
+      "temporal": 0.1846294869050214,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.4226,
+      "combined_entropy": 1.5258741566032648,
+      "environmental_hash": "ed59e3090e3b627cb7f1337116a2fbec583af7cad9a59ed9acf831cbd8343fab"
+    },
+    "search_results": [
+      {
+        "iteration": 0,
+        "entropy": 1.5342878431492353,
+        "resonance": 0.5637254901960784,
+        "suitability": 0.8649171664811866
+      },
+      {
+        "iteration": 1,
+        "entropy": 1.5423882045721746,
+        "resonance": 0.6446078431372549,
+        "suitability": 0.9942355338296126
+      },
+      {
+        "iteration": 2,
+        "entropy": 1.4817561335787488,
+        "resonance": 0.43529411764705883,
+        "suitability": 0.6449997287342789
+      },
+      {
+        "iteration": 3,
+        "entropy": 1.5232717495506858,
+        "resonance": 0.3843137254901961,
+        "suitability": 0.585414241003793
+      },
+      {
+        "iteration": 4,
+        "entropy": 1.5095413087718617,
+        "resonance": 0.6602941176470588,
+        "suitability": 0.9967412465273028
+      },
+      {
+        "iteration": 5,
+        "entropy": 1.5146647244140732,
+        "resonance": 0.6426470588235295,
+        "suitability": 0.973394830248456
+      },
+      {
+        "iteration": 6,
+        "entropy": 1.4526826523311545,
+        "resonance": 0.40441176470588236,
+        "suitability": 0.587481954986864
+      },
+      {
+        "iteration": 7,
+        "entropy": 1.5955619348341117,
+        "resonance": 0.46078431372549017,
+        "suitability": 0.7352099111490514
+      },
+      {
+        "iteration": 8,
+        "entropy": 1.7411544005701505,
+        "resonance": 0.4632352941176471,
+        "suitability": 0.8065641708523491
+      },
+      {
+        "iteration": 9,
+        "entropy": 1.413506405391473,
+        "resonance": 0.5137254901960784,
+        "suitability": 0.7261542710050312
+      },
+      {
+        "iteration": 10,
+        "entropy": 1.5135533619490955,
+        "resonance": 0.36470588235294116,
+        "suitability": 0.5520018143579054
+      },
+      {
+        "iteration": 11,
+        "entropy": 1.4313252901263473,
+        "resonance": 0.5485294117647059,
+        "suitability": 0.7851240194369523
+      },
+      {
+        "iteration": 12,
+        "entropy": 1.4565317977114536,
+        "resonance": 0.4985294117647059,
+        "suitability": 0.7261239403296805
+      },
+      {
+        "iteration": 13,
+        "entropy": 1.4232422549087405,
+        "resonance": 0.5044117647058823,
+        "suitability": 0.717900137402497
+      },
+      {
+        "iteration": 14,
+        "entropy": 1.479313446002891,
+        "resonance": 0.4372549019607843,
+        "suitability": 0.646837055801264
+      },
+      {
+        "iteration": 15,
+        "entropy": 1.47017809575933,
+        "resonance": 0.3637254901960784,
+        "suitability": 0.5347412485555995
+      },
+      {
+        "iteration": 16,
+        "entropy": 1.4020021337328465,
+        "resonance": 0.49166666666666664,
+        "suitability": 0.6893177157519829
+      },
+      {
+        "iteration": 17,
+        "entropy": 1.4120031070627688,
+        "resonance": 0.5509803921568628,
+        "suitability": 0.777986025656153
+      },
+      {
+        "iteration": 18,
+        "entropy": 1.4878375837254008,
+        "resonance": 0.4446078431372549,
+        "suitability": 0.6615042590386953
+      },
+      {
+        "iteration": 19,
+        "entropy": 1.5258741566032648,
+        "resonance": 0.6598039215686274,
+        "suitability": 1.006777752347056
+      }
+    ],
+    "ciphertext": "6228e42687d742ae26d08d9d4afe81530d1e353a16b216f1cfd5759730c471b1",
+    "iv": "28f9f3b406821c4285bcabb24ba88cea",
+    "thermodynamic_energy_joules": 1.1867195023406275e+31,
+    "encryption_timestamp": 1757781485.2117069
+  },
+  "map_generation": {
+    "location": "San Francisco",
+    "terrain_features": 143,
+    "street_segments": 236,
+    "buildings": 95,
+    "realtime_elements": 40,
+    "environmental_state": {
+      "timestamp": 1757781485.211863,
+      "computational": 0.6975,
+      "temporal": 0.1727900083895019,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.6839,
+      "combined_entropy": 1.6336164578487071,
+      "environmental_hash": "041b5b8042190a738f52e2533c7cc12a1bbbd14acbe86e84f126f57233b17bd5"
+    },
+    "generation_energy": 1.001101e+18,
+    "universe_complexity": 1016
+  },
+  "ui_generation": {
+    "ui_type": "dashboard",
+    "layout_elements": 54,
+    "color_variations": 23,
+    "interactive_elements": 18,
+    "data_points": 105,
+    "environmental_state": {
+      "timestamp": 1757781486.1296244,
+      "computational": 0.684,
+      "temporal": 0.2930376362200368,
+      "spatial": 0.931,
+      "thermal": 0.9043560606060606,
+      "network": 0.5536,
+      "combined_entropy": 1.595249479108625,
+      "environmental_hash": "7884b0ab5e31f7b6a48f766ab51815fb33247447cc7efc8c8142a44eeba7bee4"
+    },
+    "generation_energy": 10111000000.0,
+    "rendering_complexity": 419
+  },
+  "network_results": {
+    "task_name": "map_generation",
+    "participating_devices": 5,
+    "average_quality": 0.8320697622089028,
+    "total_processing_time": 9.0,
+    "total_payments": 1.4160348811044512,
+    "coordination_efficiency": 0.462260979004946
+  },
+  "economic_transactions": [
+    {
+      "device_id": "device_0",
+      "payment": 0.30052407551025795,
+      "timestamp": 1757781488.144565
+    },
+    {
+      "device_id": "device_1",
+      "payment": 0.4040949678443292,
+      "timestamp": 1757781488.1446044
+    },
+    {
+      "device_id": "device_2",
+      "payment": 0.31165955751187824,
+      "timestamp": 1757781488.1446266
+    },
+    {
+      "device_id": "device_3",
+      "payment": 0.1910877427017954,
+      "timestamp": 1757781488.1446445
+    },
+    {
+      "device_id": "device_4",
+      "payment": 0.20866853753619047,
+      "timestamp": 1757781488.1446612
+    },
+    {
+      "device_id": "device_0",
+      "payment": 0.2854584911565866,
+      "timestamp": 1757781489.642095
+    },
+    {
+      "device_id": "device_1",
+      "payment": 0.4084706981968774,
+      "timestamp": 1757781489.6421256
+    },
+    {
+      "device_id": "device_2",
+      "payment": 0.33309592799553,
+      "timestamp": 1757781489.642144
+    },
+    {
+      "device_id": "device_3",
+      "payment": 0.19611665567837988,
+      "timestamp": 1757781489.6421604
+    },
+    {
+      "device_id": "device_4",
+      "payment": 0.22478665539809395,
+      "timestamp": 1757781489.6421778
+    }
+  ],
+  "proof_points": {
+    "environmental_uniqueness_percent": 100.0,
+    "thermodynamic_security_joules": 1.1867195023406275e+31,
+    "total_economic_value": 2.863963309529919,
+    "network_efficiency": 0.462260979004946,
+    "universe_generation_verified": true
+  }
+}
